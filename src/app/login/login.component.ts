@@ -59,11 +59,8 @@ export class LoginComponent {
       }
     }
 
-    // Set localstorage info
-    localStorage.setItem('usrMail', email);
-    localStorage.setItem('usrPswd', password);
 
-    console.log("Email: " + email + " Password: " + password);
+
 
     this.afAuth.signInWithEmailAndPassword(email, password).then((user) => { //Realitza login
       this.storageService.isLoggedNext(true);
