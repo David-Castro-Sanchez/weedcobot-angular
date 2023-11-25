@@ -21,7 +21,6 @@ export class LoginComponent {
   loginUser: FormGroup;
   subscription: Subscription;
 
-
   constructor(private fb: FormBuilder, private afAuth: AngularFireAuth, public router: Router,
     private fireBaseErrorService: FirebaseErrorService, private toastr: ToastrService, private storageService: StorageService,
     public apiService: ApiService) {

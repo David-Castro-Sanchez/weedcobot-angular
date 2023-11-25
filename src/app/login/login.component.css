@@ -1,22 +1,33 @@
-.wrapper{
+.wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url("/assets/img/background.jpg");
+    background-size: cover;
+    /* Set the height to 100% of the viewport height */
+    padding: 100px;
+    height: 100vh;
 }
+
 .logo{
     height: 130px;
     margin-bottom: 10px;
 }
 
 .body{
+    margin-top: 2%;
     width: 100%;
     max-width: 330px;
     text-align: center;
+    padding: 3%;
+    border-radius: 20px;
+
+    background-color: rgba(0, 0, 0, 0.539);
 }
 
 .btn-google{
-    background-color:white;
-    color : #444;
+    background-color: #61A1FE;
+    color : white;
     width: 100%;
     font-weight: 500;
 }
@@ -44,4 +55,18 @@
     background-color: #9d9d9d;
     color: white;
     width: 100%;
+}
+
+h1{
+    color: white;
+    font-weight: 500;
+    border-color: white;
+}
+
+.basicButton{
+    padding-top: 10px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+    border-color: none;
+    font-size: 20px;
 }
