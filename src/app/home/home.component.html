@@ -2,20 +2,20 @@
     <div class="body">
       <h1>Wellcome to Weed CoBot</h1>
       <form (ngSubmit)="sendChanges()" [formGroup]="changesForm">
-        <label>maximum_temperature</label>
+        <label class="text-light">maximum_temperature</label>
         <input type="text" formControlName="maximum_temperature" class="form-control" placeholder="maximum_temperature">
-        <label>minimum_temperature</label>
+        <label class="text-light">minimum_temperature</label>
         <input type="text" formControlName="minimum_temperature" class="form-control" placeholder="minimum_temperature">
-        <label>maximum_air_humidity</label>
+        <label class="text-light">maximum_air_humidity</label>
         <input type="text" formControlName="maximum_air_humidity" class="form-control" placeholder="maximum_air_humidity">
-        <label>minimum_air_humidity</label>
+        <label class="text-light">minimum_air_humidity</label>
         <input type="text" formControlName="minimum_air_humidity" class="form-control" placeholder="minimum_air_humidity">
-        <label>maximum_soil_humidity</label>
+        <label class="text-light">maximum_soil_humidity</label>
         <input type="text" formControlName="maximum_soil_humidity" class="form-control" placeholder="maximum_soil_humidity">
-        <label>minimum_soil_humidity</label>
+        <label class="text-light">minimum_soil_humidity</label>
         <input type="text" formControlName="minimum_soil_humidity" class="form-control" placeholder="minimum_soil_humidity">
-        <button class="basicButton" type="submit" [disabled]="changesForm.invalid">Save Changes</button>
+        <button class="btn btn-success mt-2" type="submit" [disabled]="changesForm.invalid">Save Changes</button>
       </form>
+      <button class="btn btn-danger mt-2" (click)="logout()">Logout</button>
     </div>
-    <button class="btn btn-lg btn-reg" (click)="logout()">Logout</button>
 </div>
