@@ -1,16 +1,21 @@
 <div class="wrapper">
-    <div class="editContent">
-        <label for="">Set minimum humidity value</label><br>
-        <input id="" type="number" name="" id=""><br>
-
-        <label for="">Set minimum humidity value</label><br>
-        <input id="" type="number" name="" id=""><br>
-
-        <label for="">Set minimum humidity value</label><br>
-        <input id="" type="number" name="" id=""><br>
-
-        <label for="">Set minimum humidity value</label><br>
-        <input id="" type="number" name="" id="">
+    <div class="body">
+      <h1>Wellcome to Weed CoBot</h1>
+      <form (ngSubmit)="sendChanges()" [formGroup]="changesForm">
+        <label>maximum_temperature</label>
+        <input type="text" formControlName="maximum_temperature" class="form-control" placeholder="maximum_temperature">
+        <label>minimum_temperature</label>
+        <input type="text" formControlName="minimum_temperature" class="form-control" placeholder="minimum_temperature">
+        <label>maximum_air_humidity</label>
+        <input type="text" formControlName="maximum_air_humidity" class="form-control" placeholder="maximum_air_humidity">
+        <label>minimum_air_humidity</label>
+        <input type="text" formControlName="minimum_air_humidity" class="form-control" placeholder="minimum_air_humidity">
+        <label>maximum_soil_humidity</label>
+        <input type="text" formControlName="maximum_soil_humidity" class="form-control" placeholder="maximum_soil_humidity">
+        <label>minimum_soil_humidity</label>
+        <input type="text" formControlName="minimum_soil_humidity" class="form-control" placeholder="minimum_soil_humidity">
+        <button class="basicButton" type="submit" [disabled]="changesForm.invalid">Save Changes</button>
+      </form>
     </div>
+    <button class="btn btn-lg btn-reg" (click)="logout()">Logout</button>
 </div>
-<button class="btn btn-lg btn-reg" (click)="logout()">Logout</button>
