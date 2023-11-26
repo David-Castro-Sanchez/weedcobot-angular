@@ -1,7 +1,15 @@
-#userId{
+#userId {
     color: white;
-    padding-bottom: 20px;
+}
+
+img{
+    cursor: pointer;
+}
+
+h2 {
+    color: white;
     margin-top: 20px;
+    font-weight: bold;
 }
 
 /* Escritorio */
@@ -12,42 +20,43 @@
         justify-content: center;
         background-image: url("/assets/img/homeBack.jpg");
         padding: 100px;
+        padding-top: 10px;
         height: auto;
     }
-    
-    .editContent{
+
+    .editContent {
         text-align: left;
         padding: 5%;
         background-color: rgba(0, 0, 0, 0.58);
-    
+
         color: white;
         border-radius: 20px;
     }
-    
-    .editContent input{
+
+    .editContent input {
         margin-bottom: 30px;
         width: 100%;
         border-radius: 8px;
     }
-    
-    .body{
+
+    .body {
         margin-top: 2%;
         width: 100%;
         max-width: 330px;
         text-align: center;
         padding: 3%;
         border-radius: 20px;
-    
+
         background-color: rgba(0, 0, 0, 0.539);
     }
-    
-    h1{
+
+    h1 {
         color: white;
         font-weight: 500;
         border-color: white;
     }
-    
-    input{
+
+    input {
         margin-bottom: 30px;
     }
 }
@@ -59,42 +68,42 @@
         align-items: center;
         justify-content: center;
         background-image: url("/assets/img/homeBack.jpg");
-        height: 100vh;
+        height: auto;
     }
-    
-    .editContent{
+
+    .editContent {
         text-align: left;
         padding: 5%;
         background-color: rgba(0, 0, 0, 0.58);
-    
+
         color: white;
         border-radius: 20px;
     }
-    
-    .editContent input{
+
+    .editContent input {
         margin-bottom: 30px;
         width: 100%;
         border-radius: 8px;
     }
-    
-    .body{
+
+    .body {
         margin-top: 2%;
         width: 100%;
         max-width: 330px;
         text-align: center;
         padding: 10%;
         border-radius: 20px;
-    
+
         background-color: rgba(0, 0, 0, 0.539);
     }
-    
-    h1{
+
+    h1 {
         color: white;
         font-weight: 500;
         border-color: white;
     }
-    
-    input{
+
+    input {
         margin-bottom: 30px;
     }
 }

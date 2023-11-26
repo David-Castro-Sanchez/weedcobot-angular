@@ -1,9 +1,8 @@
 <div class="wrapper">
     <div class="body">
-      <h1>Preferences</h1>
+      <h1>Dashboard</h1>
 
-      <label id="userId" style="margin-top: 10px;margin-bottom: 10px;"></label>
-      <a href="https://t.me/weed_cobot_bot" target="_blank">Go to telegram</a>
+      <h2>Preferences</h2>
       <form (ngSubmit)="sendChanges()" [formGroup]="changesForm">
         <label class="text-light">Maximum Temperature</label>
         <input type="text" formControlName="maximum_temperature" class="form-control" placeholder="maximum_temperature">
@@ -24,6 +23,14 @@
         <input type="text" formControlName="minimum_soil_humidity" class="form-control" placeholder="minimum_soil_humidity">
         <button class="btn btn-success mt-2" type="submit" [disabled]="changesForm.invalid">Save Changes</button>
       </form>
+
+      <h2>User id</h2>
+      <label id="userId"></label>
+
+      <h2>Telegram bot</h2>
+      <img src="/assets/img/telegramIcon.png" width="60px" (click)="redirectTelegram()">
+      <br><br>
+      
       <button class="btn btn-danger mt-2" (click)="logout()">Logout</button>
     </div>
 </div>

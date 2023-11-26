@@ -27,7 +27,7 @@ export class HomeComponent {
     })
     apiService.getUser(this.storageService.SessionGetStorage("uid")).then(response => {
       let userSpan = document.getElementById("userId") as HTMLSpanElement;
-      userSpan.innerHTML = "User id: <br>" + this.storageService.SessionGetStorage("uid");
+      userSpan.innerHTML = this.storageService.SessionGetStorage("uid");
       this.changesForm.controls['maximum_temperature'].setValue(response.max_temperature);
       this.changesForm.controls['minimum_temperature'].setValue(response.min_temperature);
       this.changesForm.controls['maximum_air_humidity'].setValue(response.max_air_humidity);
@@ -58,5 +58,9 @@ export class HomeComponent {
       this.router.navigate(['/']);
 
     })
+  }
+
+  redirectTelegram(){
+    window.open("https://t.me/weed_cobot_bot", "_blank");
   }
 }
