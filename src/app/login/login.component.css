@@ -1,72 +1,153 @@
-.wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url("/assets/img/background.jpg");
-    background-size: cover;
-    /* Set the height to 100% of the viewport height */
-    padding: 100px;
-    height: 100vh;
+/* Escritorio */
+@media (min-width: 768px) {
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("/assets/img/background.jpg");
+        background-size: cover;
+        /* Set the height to 100% of the viewport height */
+        padding: 100px;
+        height: 100vh;
+    }
+
+    .logo {
+        height: 130px;
+        margin-bottom: 10px;
+    }
+
+    .body {
+        margin-top: 2%;
+        width: 100%;
+        max-width: 330px;
+        text-align: center;
+        padding: 3%;
+        border-radius: 20px;
+
+        background-color: rgba(0, 0, 0, 0.539);
+    }
+
+    .btn-google {
+        background-color: #61A1FE;
+        color: white;
+        width: 100%;
+        font-weight: 500;
+    }
+
+    .btn-google img {
+        width: 20px;
+        margin-bottom: 4px;
+        margin-right: 14px;
+    }
+
+    .btn-reg {
+        background-color: #9d9d9d;
+        color: white;
+        width: 100%;
+        font-weight: 500;
+    }
+
+    .btn-google img {
+        width: 20px;
+        margin-bottom: 4px;
+        margin-right: 14px;
+    }
+
+    .btn-reg {
+        background-color: #9d9d9d;
+        color: white;
+        width: 100%;
+    }
+
+    h1 {
+        color: white;
+        font-weight: 500;
+        border-color: white;
+    }
+
+    .basicButton {
+        padding-top: 10px;
+        padding-bottom: 8px;
+        border-radius: 8px;
+        border-color: none;
+        font-size: 20px;
+    }
 }
 
-.logo{
-    height: 130px;
-    margin-bottom: 10px;
-}
+/* mobile */
+@media (max-width: 767px) {
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("/assets/img/background.jpg");
+        background-size: cover;
+        /* Set the height to 100% of the viewport height */
+        height: 100vh;
+    }
 
-.body{
-    margin-top: 2%;
-    width: 100%;
-    max-width: 330px;
-    text-align: center;
-    padding: 3%;
-    border-radius: 20px;
+    .logo {
+        height: 130px;
+        margin-bottom: 10px;
+    }
 
-    background-color: rgba(0, 0, 0, 0.539);
-}
+    .body {
+        margin-top: 2%;
+        width: 100%;
+        max-width: 330px;
+        text-align: center;
+        padding: 10%;
+        border-radius: 20px;
 
-.btn-google{
-    background-color: #61A1FE;
-    color : white;
-    width: 100%;
-    font-weight: 500;
-}
+        background-color: rgba(0, 0, 0, 0.539);
+    }
 
-.btn-google img{
-    width: 20px;
-    margin-bottom: 4px;
-    margin-right: 14px;
-}
+    button{
+        font-size: 16px;
+    }
+    .btn-google {
+        background-color: #61A1FE;
+        color: white;
+        width: 100%;
+        font-weight: 500;
+    }
 
-.btn-reg{
-    background-color: #9d9d9d;
-    color: white;
-    width: 100%;
-    font-weight: 500;
-}
+    .btn-google img {
+        width: 20px;
+        margin-bottom: 4px;
+        margin-right: 14px;
+    }
 
-.btn-google img{
-    width: 20px;
-    margin-bottom: 4px;
-    margin-right: 14px;
-}
+    .btn-reg {
+        background-color: #9d9d9d;
+        color: white;
+        width: 100%;
+        font-weight: 500;
+    }
 
-.btn-reg{
-    background-color: #9d9d9d;
-    color: white;
-    width: 100%;
-}
+    .btn-google img {
+        width: 20px;
+        margin-bottom: 4px;
+        margin-right: 14px;
+    }
 
-h1{
-    color: white;
-    font-weight: 500;
-    border-color: white;
-}
+    .btn-reg {
+        background-color: #9d9d9d;
+        color: white;
+        width: 100%;
+    }
 
-.basicButton{
-    padding-top: 10px;
-    padding-bottom: 8px;
-    border-radius: 8px;
-    border-color: none;
-    font-size: 20px;
+    h1 {
+        color: white;
+        font-weight: 500;
+        border-color: white;
+    }
+
+    .basicButton {
+        padding-top: 10px;
+        padding-bottom: 8px;
+        border-radius: 8px;
+        border-color: none;
+        font-size: 16px;
+    }
 }

@@ -1,18 +1,26 @@
 <div class="wrapper">
     <div class="body">
-      <h1>Wellcome to Weed CoBot</h1>
+      <h1>Preferences</h1>
+
+      <label id="userId" style="margin-top: 10px;margin-bottom: 10px;"></label>
+      <a href="https://t.me/weed_cobot_bot" target="_blank">Go to telegram</a>
       <form (ngSubmit)="sendChanges()" [formGroup]="changesForm">
-        <label class="text-light">maximum_temperature</label>
+        <label class="text-light">Maximum Temperature</label>
         <input type="text" formControlName="maximum_temperature" class="form-control" placeholder="maximum_temperature">
-        <label class="text-light">minimum_temperature</label>
+        
+        <label class="text-light">Minimum Temperature</label>
         <input type="text" formControlName="minimum_temperature" class="form-control" placeholder="minimum_temperature">
-        <label class="text-light">maximum_air_humidity</label>
+        
+        <label class="text-light">Maximum air humidity</label>
         <input type="text" formControlName="maximum_air_humidity" class="form-control" placeholder="maximum_air_humidity">
-        <label class="text-light">minimum_air_humidity</label>
+        
+        <label class="text-light">Minimum Air Humidity</label>
         <input type="text" formControlName="minimum_air_humidity" class="form-control" placeholder="minimum_air_humidity">
-        <label class="text-light">maximum_soil_humidity</label>
+        
+        <label class="text-light">Maximum soil humidity</label>
         <input type="text" formControlName="maximum_soil_humidity" class="form-control" placeholder="maximum_soil_humidity">
-        <label class="text-light">minimum_soil_humidity</label>
+        
+        <label class="text-light">Minimum soil humidity</label>
         <input type="text" formControlName="minimum_soil_humidity" class="form-control" placeholder="minimum_soil_humidity">
         <button class="btn btn-success mt-2" type="submit" [disabled]="changesForm.invalid">Save Changes</button>
       </form>
