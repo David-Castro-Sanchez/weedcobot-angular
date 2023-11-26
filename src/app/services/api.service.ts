@@ -50,6 +50,22 @@ export class ApiService {
         );
     });
   }
+
+  sendUser(user: UserModel): Promise<UserModel> {
+    const headers = new HttpHeaders().set('Authorization', 'Bearer ' + '1234');
+
+    return new Promise((resolve, reject) => {
+      this.http.patch<UserModel>(this.apiUrl + 'user/' + user.id, user, { headers: headers })
+        .subscribe(
+          (response: UserModel) => {
+            resolve(response);
+          },
+          (error) => {
+            reject(error);
+          }
+        );
+    });
+  }
  
 
   

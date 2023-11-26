@@ -14,6 +14,7 @@
         <input type="text" formControlName="maximum_soil_humidity" class="form-control" placeholder="maximum_soil_humidity">
         <label>minimum_soil_humidity</label>
         <input type="text" formControlName="minimum_soil_humidity" class="form-control" placeholder="minimum_soil_humidity">
+        <button class="basicButton" type="submit" [disabled]="changesForm.invalid">Save Changes</button>
       </form>
     </div>
     <button class="btn btn-lg btn-reg" (click)="logout()">Logout</button>

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { StorageService } from '../services/storage.service';
 import { ApiService } from '../services/api.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserModel } from '../models/user.model';
 
 @Component({
   selector: 'app-home',
@@ -25,7 +26,7 @@ export class HomeComponent {
         minimum_soil_humidity: ['', Validators.required]
       })
       apiService.getUser(this.storageService.SessionGetStorage("uid")).then(response => {
-        console.log(response);
+        
         this.changesForm.controls['maximum_temperature'].setValue(response.max_temperature);
         this.changesForm.controls['minimum_temperature'].setValue(response.min_temperature);
         this.changesForm.controls['maximum_air_humidity'].setValue(response.max_air_humidity);
@@ -39,7 +40,14 @@ export class HomeComponent {
   }
 
   sendChanges() {
-   
+   let user:UserModel = this.storageService.SessionGetStorage("user");
+   user.max_air_humidity = Number(this.changesForm.value.maximum_air_humidity);
+   user.min_air_humidity = Number(this.changesForm.value.minimum_air_humidity);
+   user.max_temperature = Number(this.changesForm.value.maximum_temperature);
+   user.min_temperature = Number(this.changesForm.value.minimum_temperature);
+   user.max_soil_humidity = Number(this.changesForm.value.maximum_soil_humidity);
+   user.min_soil_humidity = Number(this.changesForm.value.minimum_soil_humidity);
+   this.apiService.sendUser(user);
   }
 
   logout() {
