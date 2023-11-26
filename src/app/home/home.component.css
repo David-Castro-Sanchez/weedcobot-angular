@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/assets/img/homeBack.jpg");
+    background-size: cover;
+    padding: 100px;
+    height: 100vh;
+}
+
+.editContent{
+    text-align: left;
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.58);
+
+    color: white;
+    border-radius: 20px;
+}
+
+.editContent input{
+    margin-bottom: 30px;
+    width: 100%;
+    border-radius: 8px;
+}
