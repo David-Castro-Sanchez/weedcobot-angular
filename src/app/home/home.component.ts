@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { StorageService } from '../services/storage.service';
 import { ApiService } from '../services/api.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -11,14 +12,34 @@ import { ApiService } from '../services/api.service';
 })
 export class HomeComponent {
 
-  constructor(private afAuth: AngularFireAuth, private router: Router, private storageService: StorageService,
-    private apiService:ApiService) {
+  changesForm: FormGroup;
 
+  constructor(private fb: FormBuilder, private afAuth: AngularFireAuth, private router: Router, private storageService: StorageService,
+    private apiService:ApiService) {
+      this.changesForm = this.fb.group({
+        maximum_temperature: ['', [Validators.required]],
+        minimum_temperature: ['', Validators.required],
+        maximum_air_humidity: ['', [Validators.required]],
+        minimum_air_humidity: ['', Validators.required],
+        maximum_soil_humidity: ['', [Validators.required]],
+        minimum_soil_humidity: ['', Validators.required]
+      })
       apiService.getUser(this.storageService.SessionGetStorage("uid")).then(response => {
+        console.log(response);
+        this.changesForm.controls['maximum_temperature'].setValue(response.max_temperature);
+        this.changesForm.controls['minimum_temperature'].setValue(response.min_temperature);
+        this.changesForm.controls['maximum_air_humidity'].setValue(response.max_air_humidity);
+        this.changesForm.controls['minimum_air_humidity'].setValue(response.min_air_humidity);
+        this.changesForm.controls['maximum_soil_humidity'].setValue(response.max_soil_humidity);
+        this.changesForm.controls['minimum_soil_humidity'].setValue(response.min_soil_humidity);
 
         storageService.SessionAddStorage("user",response);
       })
-    
+
+  }
+
+  sendChanges() {
+   
   }
 
   logout() {
@@ -27,7 +48,7 @@ export class HomeComponent {
       localStorage.clear();
       this.storageService.SessionClear();
       this.router.navigate(['/']);
-      
+
     })
   }
 
